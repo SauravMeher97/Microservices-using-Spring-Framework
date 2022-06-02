@@ -2,10 +2,28 @@ package com.backend.Accounts;
 
 public class SavingsAccount implements Account {
     private int balance;
+    private int amount;
+    
+	public int getAmount() {
+		return amount;
+	}
 
-	
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	public SavingsAccount() {
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
 	public SavingsAccount(int balance) {
-		super();
 		this.balance = balance;
 	}
 
@@ -23,10 +41,12 @@ public class SavingsAccount implements Account {
 		// TODO Auto-generated method stub
 		
 	}
+
 	@Override
 	public String toString() {
-		return "SavingsAccount [balance=" + balance + "]";
+		return "SavingsAccount [balance=" + balance + ", amount=" + amount + "]";
 	}
+	
 
       
       

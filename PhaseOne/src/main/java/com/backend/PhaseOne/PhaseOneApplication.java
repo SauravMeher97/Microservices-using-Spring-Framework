@@ -1,7 +1,10 @@
 package com.backend.PhaseOne;
 
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.core.io.FileSystemResource;
 
 import com.backend.Accounts.Account;
 import com.backend.Accounts.SavingsAccount;
@@ -11,12 +14,16 @@ import com.backend.User.User;
 public class PhaseOneApplication {
 
 	public static void main(String[] args) {
-     System.out.println("Spring Project!");
-     User user = new User("Saurav","sauravmeher@company.com");
-     Account account = new SavingsAccount(2000);
-     user.setAccount(account);
-     System.out.print(user);
-     //SpringApplication.run(PhaseOneApplication.class, args);
+		
+		//Using XmlBeanFactory( for legacy code understanding)
+		BeanFactory factory;
+		factory  = new XmlBeanFactory(new FileSystemResource("Spring.xml"));
+		User user = (User) factory.getBean("user");
+		System.out.println(user);
+		System.out.println("User Account details:"+ user.getAccount());
+//		User user2 = (User) factory.getBean("user");
+//		System.out.println(user2);
+		
 	}
 
 }
