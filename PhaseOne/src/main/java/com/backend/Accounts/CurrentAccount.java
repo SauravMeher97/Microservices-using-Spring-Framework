@@ -1,5 +1,14 @@
 package com.backend.Accounts;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
+
+//@ComponentScan
+@Component("CurrentAccount")
+@Scope("prototype")
+@Primary
 public class CurrentAccount implements Account {
     private int balance;
     private int amount;
