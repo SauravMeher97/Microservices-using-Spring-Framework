@@ -7,8 +7,8 @@
     <!-- bean definitions here -->
 
 <bean id="user" class="com.backend.User.User" scope="singleton" autowire="byType">
-<property name="username" value="saurav"/>
-<property name="email" value="saurav@company.com"/>
+<constructor-arg index="0" name="username" value="saurav"/>
+<constructor-arg index="1" name="email" value="saurav@company.com"/>
 </bean>
 <bean id="savingsaccount" class="com.backend.Accounts.SavingsAccount"  >
 <property name="amount" value="2000"/>

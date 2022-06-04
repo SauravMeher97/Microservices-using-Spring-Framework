@@ -14,6 +14,7 @@ public class CurrentAccount implements Account {
 
     
     public CurrentAccount() {
+    	System.out.println("Inside current account default constructor");
 	}
 
 	public int getBalance() {

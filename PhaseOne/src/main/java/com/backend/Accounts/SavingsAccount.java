@@ -13,6 +13,7 @@ public class SavingsAccount implements Account {
 	}
 
 	public SavingsAccount() {
+    	System.out.println("Inside Savings account default constructor");
 	}
 
 	public int getBalance() {

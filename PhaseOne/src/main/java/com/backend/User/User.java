@@ -19,15 +19,15 @@ public class User implements UserInterface {
 	}
 	public User() {
 		this.userid=++counter;
-		System.out.println("Default Constructor");
+		System.out.println("User Default Constructor");
 
 	}
-	public User( String username, String email,Account account) {
-		System.out.println("Parameterised Constructor");
+	public User( String username, String email) {
+		System.out.println("Inside User Class Parameterised Constructor");
 		this.userid = ++counter;
 		this.username = username;
 		this.email = email;
-		this.Account=account;
+		//this.Account=account;
 	}
 	public int getUserid() {
 		return userid;
