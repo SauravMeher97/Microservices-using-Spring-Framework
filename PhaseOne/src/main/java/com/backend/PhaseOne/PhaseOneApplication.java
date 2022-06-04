@@ -19,9 +19,15 @@ public class PhaseOneApplication {
 		//Using XmlBeanFactory( for legacy code understanding)
 		BeanFactory factory;
 		factory  = new ClassPathXmlApplicationContext("Spring.xml");
+		
+		System.out.println("before fetching beans");
+		
 		User user = (User) factory.getBean("user");
+		
 		System.out.println(user);
 		System.out.println("User Account details:"+ user.getAccount());
+		System.out.println("after fetching beans");
+
 		
 //		User user2 = (User) factory.getBean("user");
 //		System.out.println(user2);
